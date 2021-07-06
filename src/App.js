@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import Tabs from "./components/Tabs"; 
 
 function App() {
   return (
@@ -7,23 +8,18 @@ function App() {
       <header className="App-header">
        <h1>Project Orion</h1> 
        <p>-Welcome to the Project Orion HomePage-</p> 
+       <Tabs> 
+       <div label="Gator"> 
+         See ya later, <em>Alligator</em>! 
+       </div> 
+       <div label="Croc"> 
+         After 'while, <em>Crocodile</em>! 
+       </div> 
+       <div label="Sarcosuchus"> 
+         Nothing to see here, this tab is <em>extinct</em>! 
+       </div> 
+      </Tabs> 
       </header>
-      <AppBar position="static">
-      <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
-        <Tab label="Item One" {...a11yProps(0)} />
-        <Tab label="Item Two" {...a11yProps(1)} />
-        <Tab label="Item Three" {...a11yProps(2)} />
-      </Tabs>
-    </AppBar>
-    <TabPanel value={value} index={0}>
-      Item One
-    </TabPanel>
-    <TabPanel value={value} index={1}>
-      Item Two
-    </TabPanel>
-    <TabPanel value={value} index={2}>
-      Item Three
-    </TabPanel>
     </div>
   );
 }
